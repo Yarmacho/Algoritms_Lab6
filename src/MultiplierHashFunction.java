@@ -37,8 +37,10 @@ public class MultiplierHashFunction<T> implements IHashFunction<T> {
         {
             return calculate((String) item);
         }
-
-        return 0;
+        else
+        {
+            return item.hashCode();
+        }
     }
 
     private double calculate(Number number)
