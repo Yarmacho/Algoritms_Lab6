@@ -5,15 +5,16 @@ public class HashTable<TKey, TValue>
 
     public HashTable(int size) {
         _table = new KeyValuePair[size];
-        _function = new MultiplierHashFunction<>(size);
+        _function = new MultiplierHashFunction<>();
+        _function.SetSize(size);
     }
 
     public HashTable(int size, IHashFunction<TKey> function)
     {
         _table = new KeyValuePair[size];
         _function = function;
+        _function.SetSize(size);
     }
-
 
     public void Insert(TKey key, TValue item) throws Exception {
         var hash = _function.Caluclate(key);

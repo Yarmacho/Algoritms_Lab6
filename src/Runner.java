@@ -8,15 +8,11 @@ public class Runner
         table.Insert("world", "hello");
         table.Insert("cool", "word");
 
-
-
-
         System.out.println(table.Get("world"));
 
         System.out.println();
 
         table.PrintTable();
-
 
         table.Insert("cool", "word");
     }
